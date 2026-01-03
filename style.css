@@ -130,3 +130,29 @@ body.dark .card a {
 body.dark section h2 {
   color: #ffffff;
 }
+@media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p, li, a {
+    font-size: 16px;
+  }
+
+  nav a {
+    padding: 10px;
+    display: inline-block;
+  }
+
+  section {
+    padding: 20px 15px;
+  }
+}
