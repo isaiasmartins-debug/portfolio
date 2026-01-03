@@ -156,3 +156,21 @@ body.dark section h2 {
     padding: 20px 15px;
   }
 }
+/* Ajustes para celular */
+@media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p, a {
+    font-size: 18px;
+  }
+}
