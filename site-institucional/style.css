@@ -38,3 +38,21 @@ section {
 .voltar:hover {
   background: #0056b3;
 }
+/* Ajustes para celular */
+@media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p, a {
+    font-size: 18px;
+  }
+}
