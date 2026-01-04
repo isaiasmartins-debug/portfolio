@@ -83,3 +83,34 @@ body {
     padding: 18px;
   }
 }
+
+/* Corrigir display no mobile */
+#display {
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  overflow: hidden;
+}
+
+/* Evitar seleção ao tocar nos botões */
+.botoes button {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Garantir que nada ultrapasse o container */
+.calculadora {
+  overflow: hidden;
+}
+
+/* Ajustes específicos mobile */
+@media (max-width: 600px) {
+  .calculadora {
+    padding: 18px;
+  }
+
+  #display {
+    font-size: 2rem;
+    height: 60px;
+  }
+}
