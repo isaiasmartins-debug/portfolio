@@ -1,51 +1,29 @@
-const display = document.getElementById("display");
-const botoes = document.querySelector(".botoes");
+const display = document.getElementById('display');
+const buttons = document.querySelectorAll('.botoes button');
 
-botoes.addEventListener("click", (e) => {
-  if (!e.target.matches("button")) return;
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const value = button.dataset.value;
+    const action = button.dataset.action;
 
-  const valor = e.target.dataset.value;
-  const acao = e.target.dataset.action;
+    if (value) {
+      display.value += value;
+    }
 
-  if (valor) {
-    display.value += valor;
-  }
+    if (action === 'clear') {
+      display.value = '';
+    }
 
-  if (acao === "clear") {
-    display.value = "";
-  }
+    if (action === 'delete') {
+      display.value = display.value.slice(0, -1);
+    }
 
-  if (acao === "delete") {
-    display.value = display.value.slice(0, -1);
-  }
-
-  if (acao === "equals") {
-    calcular();
-  }
+    if (action === 'equals') {
+      try {
+        display.value = eval(display.value);
+      } catch {
+        display.value = 'Erro';
+      }
+    }
+  });
 });
-
-document.addEventListener("keydown", (e) => {
-  if ((e.key >= 0 && e.key <= 9) || "+-*/.".includes(e.key)) {
-    display.value += e.key;
-  }
-
-  if (e.key === "Enter") {
-    calcular();
-  }
-
-  if (e.key === "Backspace") {
-    display.value = display.value.slice(0, -1);
-  }
-
-  if (e.key === "Escape") {
-    display.value = "";
-  }
-});
-
-function calcular() {
-  try {
-    display.value = eval(display.value);
-  } catch {
-    display.value = "Erro";
-  }
-}

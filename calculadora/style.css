@@ -1,35 +1,44 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
 body {
-  background: #f4f4f4;
-  font-family: Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  background: #f2f2f2;
 }
 
 .voltar {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 15px;
+  left: 15px;
   text-decoration: none;
-  font-weight: bold;
-  color: #007bff;
+  color: #0077ff;
 }
 
 .calculadora {
-  background: #222;
+  background: #111;
   padding: 20px;
-  border-radius: 12px;
-  width: 280px;
+  border-radius: 20px;
+  width: 320px;
+  max-width: 90vw;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 #display {
   width: 100%;
-  height: 50px;
+  height: 60px;
+  font-size: 2rem;
+  border: none;
+  border-radius: 10px;
   margin-bottom: 15px;
-  font-size: 1.4rem;
+  padding: 10px;
   text-align: right;
-  padding-right: 10px;
 }
 
 .botoes {
@@ -38,89 +47,39 @@ body {
   gap: 10px;
 }
 
-button {
+.botoes button {
+  font-size: 1.4rem;
   padding: 15px;
-  font-size: 1.1rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
+  background: #e5e5e5;
   cursor: pointer;
+  transition: transform 0.1s ease, background 0.2s;
 }
 
-button:hover {
-  opacity: 0.9;
+.botoes button:active {
+  transform: scale(0.95);
+  background: #ccc;
 }
 
 .igual {
   grid-row: span 2;
-  background: #007bff;
-  color: white;
+  background: #0077ff;
+  color: #fff;
 }
 
 .zero {
   grid-column: span 2;
 }
 
-/* ===== Ajustes mobile para a calculadora ===== */
-
-.calculator {
-  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-}
-
-/* Botões */
-.calculator button {
-  font-size: 1.2rem;
-}
-
-/* Display */
-.calculator .display {
-  font-size: 1.8rem;
-}
-
-/* Mobile */
 @media (max-width: 600px) {
-  .calculator {
-    transform: scale(1.1);
-  }
-
-  .calculator button {
-    font-size: 1.4rem;
-    padding: 14px;
-  }
-
-  .calculator .display {
-    font-size: 2rem;
-  }
-}
-
-/* ===== Ajustes mobile para a calculadora ===== */
-
-.calculadora {
-  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-}
-
-/* Display */
-#display {
-  font-size: 1.8rem;
-  padding: 12px;
-}
-
-/* Botões */
-.botoes button {
-  font-size: 1.3rem;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .calculadora {
-    transform: scale(1.1);
-  }
-
   #display {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
+    height: 70px;
   }
 
   .botoes button {
-    font-size: 1.5rem;
-    padding: 14px;
+    font-size: 1.6rem;
+    padding: 18px;
   }
 }
