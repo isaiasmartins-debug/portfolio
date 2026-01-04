@@ -73,3 +73,7 @@ section {
     font-size: 18px !important;
   }
 }
+
+body {
+  background: red !important;
+}
