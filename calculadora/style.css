@@ -65,7 +65,7 @@ body {
 .igual {
   grid-row: span 2;
   background: #0077ff;
-  color: #fff;
+  color: #111; /* mesma cor dos outros números */
 }
 
 .zero {
