@@ -74,10 +74,6 @@ section {
   }
 }
 
-body {
-  background: red !important;
-}
-
 html {
   font-size: 18px;
 }
@@ -90,7 +86,23 @@ body * {
   font-size: 20px !important;
 }
 
-* {
-  font-size: 30px !important;
-  line-height: 1.4 !important;
+@media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p, li, a {
+    font-size: 18px;
+  }
+}
+body {
+  color: #111;
 }
