@@ -59,3 +59,68 @@ button:hover {
 .zero {
   grid-column: span 2;
 }
+
+/* ===== Ajustes mobile para a calculadora ===== */
+
+.calculator {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* Botões */
+.calculator button {
+  font-size: 1.2rem;
+}
+
+/* Display */
+.calculator .display {
+  font-size: 1.8rem;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .calculator {
+    transform: scale(1.1);
+  }
+
+  .calculator button {
+    font-size: 1.4rem;
+    padding: 14px;
+  }
+
+  .calculator .display {
+    font-size: 2rem;
+  }
+}
+
+/* ===== Ajustes mobile para a calculadora ===== */
+
+.calculadora {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* Display */
+#display {
+  font-size: 1.8rem;
+  padding: 12px;
+}
+
+/* Botões */
+.botoes button {
+  font-size: 1.3rem;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .calculadora {
+    transform: scale(1.1);
+  }
+
+  #display {
+    font-size: 2.2rem;
+  }
+
+  .botoes button {
+    font-size: 1.5rem;
+    padding: 14px;
+  }
+}
