@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #050b1a;
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  max-width: 400px;
+}
+
+h2 {
+  color: #ffd700;
+  margin-top: 30px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  background: #0b1430;
+  border: 1px solid #ffd700;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.item button {
+  background: #c40000;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart {
+  margin-top: 40px;
+  padding: 20px;
+  background: #0b1430;
+  border-top: 2px solid #ffd700;
+}
+
+.cart > button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: #ffd700;
+  color: #000;
+  border: none;
+  font-weight: bold;
+}
+
+.item-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.item-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.item-title {
+  flex: 1;
+  text-align: left;
+}
+
+.toggle-desc {
+  background: none;
+  border: none;
+  color: #ffd700;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-desc.rotated {
+  transform: rotate(180deg);
+}
+
+.item-desc {
+  font-size: 13px;
+  color: #ccc;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.item-desc.open {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.add-btn {
+  background: #c40000;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.qty-control button {
+  background: #c40000;
+  color: #fff;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.qty-control span {
+  min-width: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#cart li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;   /* remove barra */
+  padding: 6px 4px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 14px;
+}
+
+.cart-remove {
+  background: none;
+  border: none;
+  color: #ff5c5c;
+  font-size: 20px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.cart-remove:hover {
+  opacity: 0.7;
+}
